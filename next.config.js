@@ -1,7 +1,16 @@
 
-import type {NextConfig} from 'next';
+/** @type {import('next').NextConfig} */
 
-const nextConfig: NextConfig = {
+const withPWAInit = require('next-pwa');
+
+const withPWA = withPWAInit({
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+  sw: 'sw.js',
+});
+
+const nextConfig = {
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
@@ -31,4 +40,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = withPWA(nextConfig);
