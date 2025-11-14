@@ -13,7 +13,7 @@ export const ALL_CONSULTATIONS: ConsultationData[] = [
   { cups: '890222', nombre: 'CONSULTA POR NEFROLOGIA', especialidad: 'NEFROLOGIA', shortName: 'NEFR' },
   { cups: '890223', nombre: 'CONSULTA POR NEUMOLOGIA', especialidad: 'NEUMOLOGIA', shortName: 'NEUMO' },
   { cups: '890224', nombre: 'CONSULTA POR NEUROCIRUGIA', especialidad: 'NEUROCIRUGIA', shortName: 'NCX' },
-  { cups: '890225', nombre OFTALMOLOGIA', especialidad: 'OFTALMOLOGIA', shortName: 'OFT' },
+  { cups: '890225', nombre: 'CONSULTA POR OFTALMOLOGIA', especialidad: 'OFTALMOLOGIA', shortName: 'OFT' },
   { cups: '890228', nombre: 'CONSULTA POR ORTOPEDIA Y TRAUMATOLOGIA', especialidad: 'ORTOPEDIA Y TRAUMATOLOGIA', shortName: 'ORT' },
   { cups: '890229', nombre: 'CONSULTA POR OTORRINOLARINGOLOGIA', especialidad: 'OTORRINOLARINGOLOGIA', shortName: 'ORL' },
   { cups: '890230', nombre: 'CONSULTA POR PEDIATRIA', especialidad: 'PEDIATRIA', shortName: 'PED' },
