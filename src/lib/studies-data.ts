@@ -1,3 +1,69 @@
+
 import type { StudyData } from './data';
 
-export const ALL_STUDIES: StudyData[] = [];
+export const ALL_STUDIES: StudyData[] = [
+  // Tomografías (TAC)
+  { cups: '879101', nombre: 'TOMOGRAFIA AXIAL COMPUTADA DE CRANEO SIMPLE', modalidad: 'TAC' },
+  { cups: '879102', nombre: 'TOMOGRAFIA AXIAL COMPUTADA DE CRANEO CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879130', nombre: 'TOMOGRAFIA DE SILLA TURCA (HIPOFISIS) SIMPLE', modalidad: 'TAC' },
+  { cups: '879131', nombre: 'TOMOGRAFIA DE SILLA TURCA (HIPOFISIS) CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879140', nombre: 'TOMOGRAFIA DE ORBITAS SIMPLE', modalidad: 'TAC' },
+  { cups: '879141', nombre: 'TOMOGRAFIA DE ORBITAS CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879170', nombre: 'TOMOGRAFIA DE SENOS PARANASALES O CARA', modalidad: 'TAC' },
+  { cups: '879201', nombre: 'TOMOGRAFIA DE CUELLO SIMPLE', modalidad: 'TAC' },
+  { cups: '879202', nombre: 'TOMOGRAFIA DE CUELLO CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879401', nombre: 'TOMOGRAFIA DE TORAX SIMPLE', modalidad: 'TAC' },
+  { cups: '879402', nombre: 'TOMOGRAFIA DE TORAX CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879405', nombre: 'ANGIOTOMOGRAFIA DE TORAX (ARTERIAS PULMONARES O AORTA)', modalidad: 'TAC' },
+  { cups: '879411', nombre: 'TOMOGRAFIA DE ABDOMEN SUPERIOR SIMPLE', modalidad: 'TAC' },
+  { cups: '879412', nombre: 'TOMOGRAFIA DE ABDOMEN SUPERIOR CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879430', nombre: 'UROTOMOGRAFIA SIMPLE', modalidad: 'TAC' },
+  { cups: '879431', nombre: 'UROTOMOGRAFIA CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879420', nombre: 'TOMOGRAFIA DE PELVIS SIMPLE', modalidad: 'TAC' },
+  { cups: '879421', nombre: 'TOMOGRAFIA DE PELVIS CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879450', nombre: 'TOMOGRAFIA ABDOMINO-PELVICA SIMPLE', modalidad: 'TAC' },
+  { cups: '879451', nombre: 'TOMOGRAFIA ABDOMINO-PELVICA CON CONTRASTE', modalidad: 'TAC' },
+  { cups: '879301', nombre: 'TOMOGRAFIA DE COLUMNA VERTEBRAL SEGMENTO CERVICAL', modalidad: 'TAC' },
+  { cups: '879302', nombre: 'TOMOGRAFIA DE COLUMNA VERTEBRAL SEGMENTO DORSAL', modalidad: 'TAC' },
+  { cups: '879303', nombre: 'TOMOGRAFIA DE COLUMNA VERTEBRAL SEGMENTO LUMBOSACRO', modalidad: 'TAC' },
+  { cups: '879503', nombre: 'TOMOGRAFIA DE MIEMBROS SUPERIORES', modalidad: 'TAC' },
+  { cups: '879504', nombre: 'TOMOGRAFIA DE MIEMBROS INFERIORES', modalidad: 'TAC' },
+
+  // Rayos X (RX)
+  { cups: '871101', nombre: 'RADIOGRAFIA DE CRANEO SIMPLE', modalidad: 'RX' },
+  { cups: '871131', nombre: 'RADIOGRAFIA DE SENOS PARANASALES', modalidad: 'RX' },
+  { cups_rx_portatil: '870202', cups: '870202', nombre: 'RADIOGRAFIA DE TORAX (P.A. O A.P. Y LATERAL...)', modalidad: 'RX' },
+  { cups: '870001', nombre: 'RADIOGRAFIA DE ABDOMEN SIMPLE', modalidad: 'RX' },
+  { cups: '872101', nombre: 'RADIOGRAFIA DE COLUMNA CERVICAL', modalidad: 'RX' },
+  { cups: '872201', nombre: 'RADIOGRAFIA DE COLUMNA DORSAL', modalidad: 'RX' },
+  { cups: '872301', nombre: 'RADIOGRAFIA DE COLUMNA LUMBOSACRA', modalidad: 'RX' },
+  { cups: '874101', nombre: 'RADIOGRAFIA DE HOMBRO', modalidad: 'RX' },
+  { cups: '874301', nombre: 'RADIOGRAFIA DE CODO', modalidad: 'RX' },
+_rx_mano: '874501', nombre: 'RADIOGRAFIA DE MANO', modalidad: 'RX' },
+  { cups: '875101', nombre: 'RADIOGRAFIA DE PELVIS O CADERA', modalidad: 'RX' },
+  { cups: '875401', nombre: 'RADIOGRAFIA DE RODILLA', modalidad: 'RX' },
+  { cups: '875601', nombre: 'RADIOGRAFIA DE PIE', modalidad: 'RX' },
+
+  // Ecografías (ECO)
+  { cups: '881211', nombre: 'ECOGRAFIA DE TEJIDOS BLANDOS', modalidad: 'ECO' },
+  { cups: '881301', nombre: 'ECOGRAFIA DE ABDOMEN TOTAL', modalidad: 'ECO' },
+  { cups: '881311', nombre: 'ECOGRAFIA DE HIGADO Y VIAS BILIARES', modalidad: 'ECO' },
+  { cups: '881350', nombre: 'ECOGRAFIA DE VIAS URINARIAS (RIÑONES, VEJIGA, PROSTATA)', modalidad: 'ECO' },
+  { cups: '881430', nombre: 'ECOGRAFIA PELVICA GINECOLOGICA', modalidad: 'ECO' },
+  { cups: '881431', nombre: 'ECOGRAFIA PELVICA TRANSVAGINAL', modalidad: 'ECO' },
+  { cups: '881411', nombre: 'ECOGRAFIA DE TIROIDES', modalidad: 'ECO' },
+  { cups: '882101', nombre: 'ECOGRAFIA DOPPLER DE VASOS ARTERIALES MIEMBRO SUPERIOR', modalidad: 'ECO' },
+  { cups: '882201', nombre: 'ECOGRAFIA DOPPLER DE VASOS VENOSOS MIEMBRO SUPERIOR', modalidad: 'ECO' },
+  { cups: '882301', nombre: 'ECOGRAFIA DOPPLER DE VASOS ARTERIALES MIEMBRO INFERIOR', modalidad: 'ECO' },
+  { cups: '882401', nombre: 'ECOGRAFIA DOPPLER DE VASOS VENOSOS MIEMBRO INFERIOR', modalidad: 'ECO' },
+
+  // Resonancia Magnética (RMN)
+  { cups: '883100', nombre: 'RESONANCIA MAGNETICA DE CEREBRO', modalidad: 'RMN' },
+  { cups: '883211', nombre: 'RESONANCIA MAGNETICA DE COLUMNA CERVICAL', modalidad: 'RMN' },
+  { cups: '883212', nombre: 'RESONANCIA MAGNETICA DE COLUMNA DORSAL', modalidad: 'RMN' },
+  { cups: '883213', nombre: 'RESONANCIA MAGNETICA DE COLUMNA LUMBOSACRA', modalidad: 'RMN' },
+  { cups: '883311', nombre: 'RESONANCIA MAGNETICA DE ABDOMEN', modalidad: 'RMN' },
+  { cups: '883321', nombre: 'RESONANCIA MAGNETICA DE PELVIS', modalidad: 'RMN' },
+  { cups: '883401', nombre: 'RESONANCIA MAGNETICA DE HOMBRO', modalidad: 'RMN' },
+  { cups: '883404', nombre: 'RESONANCIA MAGNETICA DE RODILLA', modalidad: 'RMN' },
+];
