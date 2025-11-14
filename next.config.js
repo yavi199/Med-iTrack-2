@@ -1,16 +1,13 @@
+/** @type {import('next').NextConfig} */
 
-import type {NextConfig} from 'next';
-import withPWAInit from 'next-pwa';
-
-const withPWA = withPWAInit({
+const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
   register: true,
   sw: 'sw.js',
 });
 
-const nextConfig: NextConfig = {
-  output: 'export', // <= THIS IS THE FIX
+const nextConfig = {
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
@@ -23,7 +20,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -41,4 +38,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPWA(nextConfig);
+module.exports = withPWA(nextConfig);
