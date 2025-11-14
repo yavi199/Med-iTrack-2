@@ -1,309 +1,234 @@
-starting build "e7d8ddf8-93ab-48ae-9bb2-d8cea40db57e"
-FETCHSOURCE
-From https://github.com/yavi199/Med-iTrack-2
- * branch            0c268cf3d2de7a395c1e9dfa5acf6bb86ad6b87f -> FETCH_HEAD
-HEAD is now at 0c268cf Fix: Soluciona errores de build para despliegue en Firebase
-GitCommit:
-0c268cf3d2de7a395c1e9dfa5acf6bb86ad6b87f
-BUILD
-Starting Step #0 - "ubuntu"
-Pulling image: ubuntu
-Using default tag: latest
-latest: Pulling from library/ubuntu
-20043066d3d5: Pulling fs layer
-20043066d3d5: Verifying Checksum
-20043066d3d5: Download complete
-20043066d3d5: Pull complete
-Digest: sha256:e96e81f410a9f9cae717e6cdd88cc2a499700ff0bb5061876ad24377fcc517d7
-Status: Downloaded newer image for ubuntu:latest
-docker.io/library/ubuntu:latest
-Finished Step #0 - "ubuntu"
-Starting Step #1 - "preparer"
-Pulling image: us-central1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20251013_18_04_RC00
-base_20251013_18_04_RC00: Pulling from serverless-runtimes/utilities/preparer
-11a863a28a7b: Pulling fs layer
-11a863a28a7b: Verifying Checksum
-11a863a28a7b: Download complete
-11a863a28a7b: Pull complete
-Digest: sha256:1dbd0bb3cc198c3927fe1b6d613e832954309bbc24bf9615a823f74f5ad4ff88
-Status: Downloaded newer image for us-central1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20251013_18_04_RC00
-us-central1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20251013_18_04_RC00
-2025/11/14 16:14:07 FIREBASE_CONFIG has no availability specified, applying the default of 'BUILD' and 'RUNTIME'
-2025/11/14 16:14:07 Final app hosting schema:
-env:
-- variable: FIREBASE_CONFIG
-  value: '{"databaseURL":"","projectId":"med-itrack-hyyat","storageBucket":"med-itrack-hyyat.firebasestorage.app"}'
-  availability:
-  - BUILD
-  - RUNTIME
-  source: Firebase System
-- variable: FIREBASE_WEBAPP_CONFIG
-  value: '{"apiKey":"AIzaSyCY_UIqv9G_UbdtoSPvBlMF7e_mFRO0KR8","appId":"1:106052062599:web:b3887ab61810851341d722","authDomain":"med-itrack-hyyat.firebaseapp.com","databaseURL":"","messagingSenderId":"106052062599","projectId":"med-itrack-hyyat","storageBucket":"med-itrack-hyyat.firebasestorage.app"}'
-  availability:
-  - BUILD
-  source: Firebase System
-2025/11/14 16:14:07 Final app hosting schema:
-env:
-- variable: FIREBASE_CONFIG
-  value: '{"databaseURL":"","projectId":"med-itrack-hyyat","storageBucket":"med-itrack-hyyat.firebasestorage.app"}'
-  availability:
-  - BUILD
-  - RUNTIME
-  source: Firebase System
-- variable: FIREBASE_WEBAPP_CONFIG
-  value: '{"apiKey":"AIzaSyCY_UIqv9G_UbdtoSPvBlMF7e_mFRO0KR8","appId":"1:106052062599:web:b3887ab61810851341d722","authDomain":"med-itrack-hyyat.firebaseapp.com","databaseURL":"","messagingSenderId":"106052062599","projectId":"med-itrack-hyyat","storageBucket":"med-itrack-hyyat.firebasestorage.app"}'
-  availability:
-  - BUILD
-  source: Firebase System
-Finished Step #1 - "preparer"
-Starting Step #2 - "pack"
-Pulling image: gcr.io/k8s-skaffold/pack
-Using default tag: latest
-nodejs_20251109_RC00: Pulling from serverless-runtimes/google-22-full/builder/nodejs
-828c1365039a: Already exists
-637d3a8ce607: Already exists
-981def9c0bac: Already exists
-2a6cd3f097a1: Pulling fs layer
-8dea029db3dd: Pulling fs layer
-47a6f7fef53b: Pulling fs layer
-3c75b06a95d3: Pulling fs layer
-b17ee862bd5f: Pulling fs layer
-61c448f589e1: Pulling fs layer
-fe0a88c014e5: Pulling fs layer
-1a82443b3661: Pulling fs layer
-8d5311fdb4ef: Pulling fs layer
-09d88f4e3b55: Pulling fs layer
-a136af9f6976: Pulling fs layer
-17f148e8e19c: Pulling fs layer
-db60bd3c00fd: Pulling fs layer
-8696b0a9cc57: Pulling fs layer
-c160999a5684: Pulling fs layer
-37fe714395ca: Pulling fs layer
-ae95114355a1: Pulling fs layer
-c5545608283b: Pulling fs layer
-1f02e356c100: Pulling fs layer
-4490c29092de: Pulling fs layer
-93e1801e0569: Pulling fs layer
-66b976a1689d: Pulling fs layer
-529809bd38af: Pulling fs layer
-f856b0583f28: Pulling fs layer
-26be9f471823: Pulling fs layer
-34ce8ba30961: Pulling fs layer
-e6178d2c0976: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-db60bd3c00fd: Waiting
-8696b0a9cc57: Waiting
-c160999a5684: Waiting
-37fe714395ca: Waiting
-ae95114355a1: Waiting
-c5545608283b: Waiting
-1f02e356c100: Waiting
-4490c29092de: Waiting
-93e1801e0569: Waiting
-66b976a1689d: Waiting
-529809bd38af: Waiting
-f856b0583f28: Waiting
-26be9f471823: Waiting
-34ce8ba30961: Waiting
-e6178d2c0976: Waiting
-4f4fb700ef54: Waiting
-fe0a88c014e5: Waiting
-1a82443b3661: Waiting
-8d5311fdb4ef: Waiting
-09d88f4e3b55: Waiting
-a136af9f6976: Waiting
-17f148e8e19c: Waiting
-47a6f7fef53b: Download complete
-8dea029db3dd: Verifying Checksum
-8dea029db3dd: Download complete
-61c448f589e1: Download complete
-a136af9f6976: Verifying Checksum
-37fe714395ca: Download complete
-4f4fb700ef54: Download complete
-b17ee862bd5f: Pull complete
-61c448f589e1: Pull complete
-fe0a88c014e5: Pull complete
-1a82443b3661: Pull complete
-8d5311fdb4ef: Pull complete
-09d88f4e3b55: Pull complete
-a136af9f6976: Pull complete
-17f148e8e19c: Pull complete
-db60bd3c00fd: Pull complete
-8696b0a9cc57: Pull complete
-c160999a5684: Pull complete
-37fe714395ca: Pull complete
-ae95114355a1: Pull complete
-c5545608283b: Pull complete
-1f02e356c100: Pull complete
-4490c29092de: Pull complete
-===> ANALYZING
-Image with name "us-central1-docker.pkg.dev/med-itrack-hyyat/firebaseapphosting-images/meditrack2github:build-2025-11-14-006" not found
-===> DETECTING
-target distro name/version labels not found, reading /etc/os-release file
-4 of 6 buildpacks participating
-google.nodejs.runtime        1.0.0
-google.nodejs.firebasenextjs 0.0.1
-google.nodejs.npm            1.1.0
-google.nodejs.firebasebundle 0.0.1
-===> RESTORING
-===> BUILDING
-target distro name/version labels not found, reading /etc/os-release file
-=== Node.js - Runtime (google.nodejs.runtime@1.0.0) ===
-2025/11/14 16:14:20 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
-Adding image label google.runtime-version: nodejs22
-2025/11/14 16:14:21 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
-Installing Node.js v22.21.0.
-2025/11/14 16:14:22 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/nodejs-22.21.0.tar.gz
-Installing the heapsize.sh exec.d script.
-=== Node.js - Firebasenextjs (google.nodejs.firebasenextjs@0.0.1) ===
-***** CACHE MISS: "npm_modules"
-Installing nextjs adaptor 14.0.18
-=== Node.js - Npm (google.nodejs.npm@1.1.0) ===
-***** CACHE MISS: "npm_modules"
-Installing application dependencies.
---------------------------------------------------------------------------------
-Running "npm ci --quiet --no-fund --no-audit (NODE_ENV=development)"
-npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
-npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
-npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
-npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
-npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
-npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
-npm warn deprecated fstream@1.0.12: This package is no longer supported.
-npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-npm warn deprecated @opentelemetry/exporter-jaeger@1.30.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
-npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-added 1389 packages in 53s
-Done "npm ci --quiet --no-fund --no-audit (NODE_ENV=development)" (53.51557399s)
---------------------------------------------------------------------------------
-Running "npm exec --prefix /layers/google.nodejs.firebasenextjs/npm_modules apphosting-adapter-nextjs-build"
-Overriding Next Config to add configs optmized for Firebase App Hosting
-Successfully created next.config.js with Firebase App Hosting overrides
-> med-itrack@0.1.0 build
-> next build
-  ▲ Next.js 14.2.3
-  - Environments: .env
-   Creating an optimized production build ...
-> [PWA] Compile server
-> [PWA] Compile server
-> [PWA] Compile client (static)
-> [PWA] Auto register service worker with: /workspace/node_modules/next-pwa/register.js
-> [PWA] Service worker: /workspace/public/sw.js
-> [PWA]   url: /sw.js
-> [PWA]   scope: /
-Failed to compile.
-./src/lib/consultations-data.ts
-Error: 
-  x Unexpected token `OFTALMOLOGIA`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
-    ,-[/workspace/src/lib/consultations-data.ts:13:1]
- 13 |   { cups: '890222', nombre: 'CONSULTA POR NEFROLOGIA', especialidad: 'NEFROLOGIA', shortName: 'NEFR' },
- 14 |   { cups: '890223', nombre: 'CONSULTA POR NEUMOLOGIA', especialidad: 'NEUMOLOGIA', shortName: 'NEUMO' },
- 15 |   { cups: '890224', nombre: 'CONSULTA POR NEUROCIRUGIA', especialidad: 'NEUROCIRUGIA', shortName: 'NCX' },
- 16 |   { cups: '890225', nombre OFTALMOLOGIA', especialidad: 'OFTALMOLOGIA', shortName: 'OFT' },
-    :                            ^^^^^^^^^^^^
- 17 |   { cups: '890228', nombre: 'CONSULTA POR ORTOPEDIA Y TRAUMATOLOGIA', especialidad: 'ORTOPEDIA Y TRAUMATOLOGIA', shortName: 'ORT' },
- 18 |   { cups: '890229', nombre: 'CONSULTA POR OTORRINOLARINGOLOGIA', especialidad: 'OTORRINOLARINGOLOGIA', shortName: 'ORL' },
- 19 |   { cups: '890230', nombre: 'CONSULTA POR PEDIATRIA', especialidad: 'PEDIATRIA', shortName: 'PED' },
-    `----
-Caused by:
-    Syntax Error
-Import trace for requested module:
-./src/lib/consultations-data.ts
-./src/app/(dashboard)/consultations/page.tsx
-./src/lib/studies-data.ts
-Error: 
-  x Expected ',', got ':'
-    ,-[/workspace/src/lib/studies-data.ts:39:1]
- 39 |   { cups: '872301', nombre: 'RADIOGRAFIA DE COLUMNA LUMBOSACRA', modalidad: 'RX' },
- 40 |   { cups: '874101', nombre: 'RADIOGRAFIA DE HOMBRO', modalidad: 'RX' },
- 41 |   { cups: '874301', nombre: 'RADIOGRAFIA DE CODO', modalidad: 'RX' },
- 42 | _rx_mano: '874501', nombre: 'RADIOGRAFIA DE MANO', modalidad: 'RX' },
-    :         ^
- 43 |   { cups: '875101', nombre: 'RADIOGRAFIA DE PELVIS O CADERA', modalidad: 'RX' },
- 44 |   { cups: '875401', nombre: 'RADIOGRAFIA DE RODILLA', modalidad: 'RX' },
- 45 |   { cups: '875601', nombre: 'RADIOGRAFIA DE PIE', modalidad: 'RX' },
-    `----
-Caused by:
-    Syntax Error
-Import trace for requested module:
-./src/lib/studies-data.ts
-./src/components/app/study-dialog.tsx
-./src/app/(dashboard)/imaging/page.tsx
-> Build failed because of webpack errors
-Restoring original next config in project root
-/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:61
-                reject(new Error(`Build process exited with error code ${code}.`));
-                       ^
-Error: Build process exited with error code 1.
-    at ChildProcess.<anonymous> (/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:61:24)
-    at ChildProcess.emit (node:events:519:28)
-    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
-Node.js v22.21.0
-Done "npm exec --prefix /layers/google.nodejs.firebasenextjs/npm_m..." (1m30.376931624s)
---------------------------------------------------------------------------------
-failed to build: (error ID: b16e3922):
-{"reason":"Failed Framework Build","code":"fah/failed-framework-build","userFacingMessage":"Your application failed to run the framework build command 'npm exec --prefix /layers/google.nodejs.firebasenextjs/npm_modules apphosting-adapter-nextjs-build' successfully. Please check the raw log to address the error and confirm that your application builds locally before redeploying.","rawLog":"(error ID: d0a693a9):
-Failed to compile.
-./src/lib/consultations-data.ts
-Error: 
-  x Unexpected token `OFTALMOLOGIA`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
-    ,-[/workspace/src/lib/consultations-data.ts:13:1]
- 13 |   { cups: '890222', nombre: 'CONSULTA POR NEFROLOGIA', especialidad: 'NEFROLOGIA', shortName: 'NEFR' },
- 14 |   { cups: '890223', nombre: 'CONSULTA POR NEUMOLOGIA', especialidad: 'NEUMOLOGIA', shortName: 'NEUMO' },
- 15 |   { cups: '890224', nombre: 'CONSULTA POR NEUROCIRUGIA', especialidad: 'NEUROCIRUGIA', shortName: 'NCX' },
- 16 |   { cups: '890225', nombre OFTALMOLOGIA', especialidad: 'OFTALMOLOGIA', shortName: 'OFT' },
-    :                            ^^^^^^^^^^^^
- 17 |   { cups: '890228', nombre: 'CONSULTA POR ORTOPEDIA Y TRAUMATOLOGIA', especialidad: 'ORTOPEDIA Y TRAUMATOLOGIA', shortName: 'ORT' },
- 18 |   { cups: '890229', nombre: 'CONSULTA POR OTORRINOLARINGOLOGIA', especialidad: 'OTORRINOLARINGOLOGIA', shortName: 'ORL' },
- 19 |   { cups: '890230', nombre: 'CONSULTA POR PEDIATRIA', especialidad: 'PEDIATRIA', shortName: 'PED' },
-    `----
-Caused by:
-    Syntax Error
-Import trace for requested module:
-./src/lib/consultations-data.ts
-./src/app/(dashboard)/consultations/page.tsx
-./src/lib/studies-data.ts
-Error: 
-  x Expected ',', got ':'
-    ,-[/workspace/src/lib/studies-data.ts:39:1]
- 39 |   { cups: '872301', nombre: 'RADIOGRAFIA DE COLUMNA LUMBOSACRA', modalidad: 'RX' },
- 40 |   { cups: '874101', nombre: 'RADIOGRAFIA DE HOMBRO', modalidad: 'RX' },
- 41 |   { cups: '874301', nombre: 'RADIOGRAFIA DE CODO', modalidad: 'RX' },
- 42 | _rx_mano: '874501', nombre: 'RADIOGRAFIA DE MANO', modalidad: 'RX' },
-    :         ^
- 43 |   { cups: '875101', nombre: 'RADIOGRAFIA DE PELVIS O CADERA', modalidad: 'RX' },
- 44 |   { cups: '875401', nombre: 'RADIOGRAFIA DE RODILLA', modalidad: 'RX' },
- 45 |   { cups: '875601', nombre: 'RADIOGRAFIA DE PIE', modalidad: 'RX' },
-    `----
-Caused by:
-    Syntax Error
-Import trace for requested module:
-./src/lib/studies-data.ts
-./src/components/app/study-dialog.tsx
-./src/app/(dashboard)/imaging/page.tsx
-> Build failed because of webpack errors
-/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:61
-                reject(new Error(`Build process exited with error code ${code}.`));
-                       ^
-Error: Build process exited with error code 1.
-    at ChildProcess.<anonymous> (/layers/google.nodejs.firebasenextjs/npm_modules/node_modules/@apphosting/common/dist/index.js:61:24)
-    at ChildProcess.emit (node:events:519:28)
-    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
-Node.js v22.21.0"}
-ERROR: failed to build: exit status 1
-ERROR: failed to build: executing lifecycle: failed with status code: 51
-Finished Step #2 - "pack"
-ERROR
-ERROR: build step 2 "gcr.io/k8s-skaffold/pack" failed: step exited with non-zero status: 1
+
+Conversación con Gemini en Firebase
+Tú enviaste
+
+lance la app por app hosting y github, cuando entro al link que me da el backend me abre la app normalemtne pero en el preview de firebase studio no se ve
+Gemini dijo
+¡Hola! Entiendo perfectamente tu situación. Es genial que tu aplicación se esté desplegando correctamente con Firebase App Hosting y GitHub, y que funcione sin problemas cuando accedes al link del backend. Es un gran paso.
+El hecho de que no se vea en el preview de Firebase Studio, mientras que la versión desplegada sí funciona, apunta a una diferencia fundamental entre cómo Firebase Studio maneja las previsualizaciones y cómo Firebase App Hosting despliega tu aplicación.
+Firebase Studio está diseñado para ofrecerte un entorno de desarrollo local y visual, permitiéndote iterar rápidamente en tu frontend y backend de manera local. La previsualización dentro de Studio generalmente se enfoca en esa experiencia local. Cuando ves el mensaje "Preview backend disconnected", como indican nuestros documentos, es algo que puedes ignorar con seguridad, ya que suele referirse a la conexión con un backend local simulado de Studio, no a tu backend real de App Hosting.
+Tu aplicación desplegada a través de App Hosting y GitHub ya tiene su propio dominio y backend en la nube. Firebase Studio no está diseñado para "previsualizar" directamente una aplicación ya desplegada en App Hosting como si fuera un entorno de desarrollo integrado en vivo. En cambio, su objetivo es ayudarte a construir y probar componentes mientras desarrollas, antes de desplegarlos.
+En resumen, la funcionalidad del preview de Firebase Studio se centra más en la fase de desarrollo local, mientras que Firebase App Hosting se encarga de la implementación y ejecución en producción de tu aplicación. Es completamente normal que tu aplicación funcione en el dominio de App Hosting pero no se refleje en el preview de Studio, ya que son propósitos distintos.
+Para entenderlo mejor, podrías preguntarme:
+¿Cuál es la relación ideal entre Firebase Studio y App Hosting en un flujo de trabajo de desarrollo?
+¿Cómo puedo depurar o monitorear mi aplicación desplegada en Firebase App Hosting si no es a través de Firebase Studio preview?
+¿Qué beneficios específicos ofrece Firebase Studio para aplicaciones que ya están en App Hosting?
+Cita
+
+Cita
+
+Tú enviaste
+
+como puedo mostrar mi preview? por que me sale 404?
+Gemini dijo
+¡Claro, entiendo! Un 404 en el preview de Firebase Studio, a pesar de que tu App Hosting funciona, es una señal de que el entorno de previsualización local no está encontrando lo que espera. Permíteme explicarte por qué sucede esto y cómo puedes abordarlo.
+El "preview" en Firebase Studio opera un poco diferente a tu despliegue en Firebase App Hosting. Cuando despliegas con App Hosting y GitHub, estás ejecutando tu aplicación en la infraestructura de Firebase y Google Cloud, utilizando las configuraciones de tu repositorio y el proceso de compilación que tienes definido (por ejemplo, en tus archivos de configuración o scripts de construcción). La URL que obtienes de App Hosting es el resultado final de ese proceso.
+El preview de Firebase Studio, en cambio, está diseñado para emular un entorno de ejecución local mientras desarrollas dentro del propio Studio. Un 404 aquí significa que el servidor de desarrollo interno de Studio no logra encontrar los archivos de tu aplicación (como HTML, CSS, JavaScript) en la ubicación esperada para presentarlos en el navegador.
+Las razones comunes por las que podrías ver un 404 en el preview de Firebase Studio incluyen:
+Problemas de compilación local : Tu proyecto puede no haberse compilado correctamente dentro del entorno de Studio, lo que significa que no se generaron los archivos estáticos que el servidor de preview intenta servir.
+Rutas de archivos incorrectas : El previewer de Studio podría estar buscando tu index.html o tus archivos de entrada en una ubicación predeterminada que no coincide con la estructura de tu proyecto.
+Configuración de apphosting.yaml : Aunque no tengo acceso a tu archivo apphosting.yaml , este archivo puede incluir configuraciones sobre cómo se construye y se sirve tu aplicación en App Hosting, y a veces la configuración local de Studio necesita reflejar o entender esas rutas.
+Dependencias no instaladas o errores de inicio : Si tu aplicación requiere dependencias específicas o un comando de inicio particular para su desarrollo local que no se está ejecutando o configurando correctamente en Studio, el servidor de preview no podrá servir la aplicación.
+Para intentar solucionar el 404, te sugiero lo siguiente dentro de Firebase Studio:
+Verifica los logs de compilación/servidor de Studio : Busca si hay errores o advertencias en las ventanas de log o consola dentro de Firebase Studio cuando intentas iniciar el preview. Esto puede darte pistas sobre por qué no se están generando o sirviendo los archivos.
+Asegúrate de que tu proyecto se construya localmente : Intenta ejecutar los comandos de construcción de tu aplicación ( npm run build o similar) directamente en la terminal integrada de Firebase Studio para ver si hay errores.
+Revisa la configuración de tu proyecto : Confirma que la configuración del proyecto en Studio (si es personalizable) apunta a la carpeta de salida correcta de tus archivos estáticos o a tu punto de entrada principal.
+Es importante recordar que el preview de Studio es para un desarrollo ágil y local, no un espejo de tu implementación final. Si tu aplicación funciona en el dominio de App Hosting, lo más crítico ya está bien.
+Para explorar más a fondo:
+¿Puedes darme más detalles sobre el framework de frontend que utilizas en tu Web app (React, Angular, Vue, etc.)?
+¿Hay algún mensaje de error específico en la consola de Firebase Studio o en el navegador cuando el preview muestra el 404?
+¿Cómo está estructurada la carpeta de salida de tu aplicación después de una compilación (e.g., dist , build , public )?
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Tú enviaste
+
+Excelentes preguntas! Son exactamente las correctas para llegar al fondo de este misterio. Te daré los detalles precisos:
+Framework de Frontend: La aplicación está construida con Next.js 14 y React 18. Utilizamos TypeScript en todo el proyecto. Para los componentes de la interfaz de usuario, nos apoyamos en ShadCN UI y Tailwind CSS.
+Mensajes de Error: ¡Sí! Y aquí está la pista más grande. Cuando el preview falla, el log principal no muestra un error claro de build, pero si te fijas en la traza de la red (como en uno de los logs que me enviaste), verás GET / 404 y GET /imaging 404. Esto nos dice que el servidor de Next.js arranca, pero es incapaz de encontrar y servir ninguna de las páginas. Esto apunta a un problema de enrutamiento o de configuración de la salida a nivel del servidor de desarrollo.
+Estructura de Salida: Cuando se ejecuta npm run build, Next.js genera la carpeta de salida .next/. Esta carpeta contiene todos los assets compilados, chunks de JavaScript, y archivos estáticos necesarios para ejecutar la aplicación en producción. Para un despliegue de App Hosting, no se necesita una carpeta dist o build separada como en otras aplicaciones, ya que Firebase está configurado para entender la estructura de Next.js.
+Gemini dijo
+¡Excelente información! Esos detalles son clave y me ayudan a entender exactamente dónde podría estar el cuello de botella. Tienes razón, los mensajes GET / 404 y GET /imaging 404 son la pista más grande.
+Aquí te explico por qué ves esto en el preview de Firebase Studio, incluso cuando tu despliegue en App Hosting funciona de maravilla:
+Diferencia de Entornos: Studio Preview vs. App Hosting:
+Firebase App Hosting: Está diseñado específicamente para frameworks como Next.js. Cuando despliegas, Firebase ejecuta el proceso de next build , luego configura Cloud Functions (que es parte de Cloud Functions for Firebase) para manejar las rutas dinámicas, getServerSideProps , getStaticProps (incluyendo getStaticPaths ), y las rutas de API. Sirve los assets estáticos de manera optimizada y reescribe las rutas según tu next.config.js . Es un entorno de producción que entiende completamente el ciclo de vida de una aplicación Next.js.
+Firebase Studio Preview: Este entorno está más enfocado en una experiencia de desarrollo local y previsualización de tu frontend. No siempre emula el mismo comportamiento robusto de despliegue en la nube que tiene App Hosting. El 404 que ves indica que el servidor interno de previsualización de Studio no está ejecutando tu aplicación Next.js de la misma manera que lo haría un comando next dev o next start , o que no está enlazando correctamente con el proceso de Next.js para resolver las rutas.
+La Naturaleza Dinámica de Next.js: Tus páginas de Next.js, especialmente con React 18, y si utilizas getServerSideProps o rutas de API, no son simplemente archivos HTML estáticos que se pueden servir directamente de una carpeta. Requieren un servidor Node.js en ejecución para procesar las solicitudes, realizar la renderización del lado del servidor (SSR) y manejar el enrutamiento complejo. El "404" sugiere que el preview de Studio no está redirigiendo esas solicitudes a una instancia de tu servidor Next.js en ejecución, o que no puede encontrar las rutas dinámicas necesarias.
+.next/ es un output de build, no de desarrollo: La carpeta .next/ contiene el output compilado, no el código fuente que un servidor de desarrollo como next dev utilizaría para la renderización en caliente o el manejo dinámico de rutas en desarrollo. Si el Studio preview intenta servir directamente desde .next/ sin un proceso next start adecuado (que correría el servidor Node.js que interpreta esos archivos), obtendrás 404 para cualquier ruta que no sea un asset puramente estático.
+En esencia, aunque tu app Next.js se compila y funciona perfectamente en App Hosting, el entorno de preview de Firebase Studio tiene una forma particular de "entender" y ejecutar (o no ejecutar) aplicaciones complejas como Next.js. El hecho de que tu despliegue de App Hosting funcione es la confirmación de que tu código y las configuraciones de Firebase para Next.js están correctas. El problema es específico de cómo Studio intenta "previsualizarlo".
+Para que podamos investigar más a fondo la configuración del preview en Studio:
+¿Hay alguna opción o configuración dentro de Firebase Studio que te permita especificar el comando de inicio o el puerto para la previsualización de tu aplicación?
+¿Qué logs específicos aparecen en la consola de Firebase Studio cuando intentas iniciar el preview, más allá de los errores 404 en la red?
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Tú enviaste
+
+npm run build
+med-itrack@0.1.0 build next build
+▲ Next.js 14.2.3
+Environments: .env.local, .env
+Creating an optimized production build ...
+[PWA] Compile server [PWA] Compile server [PWA] Compile client (static) [PWA] Auto register service worker with: /home/user/studio/node_modules/next-pwa/register.js [PWA] Service worker: /home/user/studio/public/sw.js [PWA] url: /sw.js [PWA] scope: / ✓ Compiled successfully Skipping validation of types Skipping linting ✓ Collecting page data ✓ Generating static pages (2/2) ✓ Collecting build traces ✓ Finalizing page optimization
+Route (pages) Size First Load JS ─ ○ /404 181 B 81.1 kB
+First Load JS shared by all 80.9 kB ├ chunks/framework-f66176bb897dc684.js 45.2 kB ├ chunks/main-5485fff89b4a1460.js 34.1 kB └ other shared chunks (total) 1.62 kB
+○ (Static) prerendered as static content
+Gemini dijo
+¡Gracias por compartir el output de tu npm run build ! Esto es excelente, porque confirma un punto crucial: tu aplicación Next.js se está compilando correctamente y de manera optimizada. Las líneas como ✓ Compiled successfully , ✓ Generating static pages (2/2) , y la mención de las rutas con su tamaño, nos dicen que Next.js ha hecho su trabajo y ha producido todos los archivos necesarios para su funcionamiento. Incluso la integración de PWA y el service worker parecen estar en orden.
+Esto significa que el problema del 404 en el preview de Firebase Studio no es un problema de tu código Next.js o de su proceso de compilación . El misterio, como bien lo identificas, radica en el entorno de previsualización de Studio y cómo interactúa (o no) con tu aplicación Next.js.
+Aquí está el "por qué" del 404:
+El preview de Firebase Studio, tal como está diseñado, parece no estar ejecutando tu aplicación Next.js de la misma manera que lo haría un servidor de producción de Next.js (con un next start ) o el servidor de desarrollo (con un next dev ).
+Next.js y el Servidor: Las aplicaciones Next.js, especialmente cuando usan SSR ( getServerSideProps ), ISR, o rutas API, requieren un servidor Node.js en ejecución para procesar las solicitudes entrantes, renderizar páginas dinámicamente y gestionar el enrutamiento. Tu carpeta .next/ contiene el resultado de la compilación, pero para que esos archivos funcionen, necesitan ser servidos por el runtime de Next.js.
+El Preview y la Falta de Runtime: El preview de Firebase Studio, en este caso, probablemente está intentando servir directamente los archivos estáticos desde una ubicación (quizás tu carpeta public o el .next/ sin un servidor Node.js intermediario). Al hacer una solicitud a / o /imaging , el previewer busca un archivo estático llamado index.html o imaging.html (o similar) y, al no encontrarlo (porque tus páginas de Next.js son dinámicas o generadas por el servidor), devuelve un 404. Es como si intentara ejecutar un coche de carreras sin el motor encendido.
+En resumen: Tu aplicación está perfectamente construida, pero el preview de Firebase Studio no está proporcionando el entorno de ejecución (el "motor" de Node.js de Next.js) que tu aplicación necesita para interpretar sus rutas dinámicas y renderizar las páginas correctamente. Por eso funciona en App Hosting (que sí provee ese entorno) pero no en el preview de Studio.
+Dada esta situación, es posible que el preview integrado de Firebase Studio no esté completamente optimizado para las complejidades de un framework full-stack como Next.js que requiere un servidor backend para la mayoría de sus funcionalidades.
+Para entender si hay alguna manera de hacer que el preview de Studio entienda mejor tu Next.js, mis preguntas anteriores siguen siendo muy relevantes:
+¿Hay alguna opción o configuración específica dentro de Firebase Studio que te permita especificar un comando de inicio (por ejemplo, npm run dev o npm run start ) o configurar un puerto para la previsualización de tu aplicación?
+Además de los 404 en la traza de red, ¿aparecen otros mensajes de error o advertencias en los logs de la consola de Firebase Studio cuando intentas iniciar el preview? (A veces, Studio puede tener sus propios mensajes internos que no son errores de red).
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Tú enviaste
+
+si, la terminal y no en los log de la da consola no se muestran errores solo en los logs del preview
+Gemini dijo
+¡Entendido! Esto nos confirma aún más la situación. El hecho de que no haya errores en la terminal durante el npm run build , y que los errores 404 solo aparezcan en los "logs del preview" (que me imagino se refiere a la salida del servidor de previsualización dentro de Studio o la consola del navegador del preview), es la pieza final del rompecabezas.
+El Diagnóstico Final:
+Tu aplicación Next.js, construida con TypeScript, React 18, ShadCN UI y Tailwind CSS, se compila correctamente. Firebase App Hosting la despliega y ejecuta sin problemas porque App Hosting está diseñado para integrar y manejar el entorno de ejecución de Next.js (básicamente, enciende un servidor Node.js que sabe cómo interpretar y servir tu carpeta .next/ ).
+Sin embargo, el preview de Firebase Studio no es un entorno de ejecución completo de Next.js . Lo que está ocurriendo es que el servidor de previsualización de Studio probablemente intenta servir los archivos resultantes de la compilación de Next.js (tu carpeta .next/ ) como si fueran archivos estáticos tradicionales (HTML, CSS, JS). Al recibir una solicitud para / o /imaging , busca archivos con esos nombres ( index.html , imaging.html , etc.) que no existen directamente en la forma que espera, porque las páginas de Next.js son rutas que se resuelven a través del servidor Node.js de Next.js.
+Por lo tanto, los 404 que ves no son un problema de tu aplicación, sino una limitación de cómo el preview de Firebase Studio maneja las aplicaciones Next.js más complejas que requieren un servidor backend para su enrutamiento y renderización. El preview en Studio está más adaptado a aplicaciones puramente estáticas o a frameworks que solo requieren la entrega de assets de frontend.
+¿Qué puedes hacer al respecto?
+Dado que el preview de Firebase Studio no parece ofrecer un entorno de runtime completo para Next.js, te sugiero lo siguiente:
+Confía en el despliegue de App Hosting: Si tu aplicación funciona perfectamente en la URL de meditrack2github--med-itrack-hyyat.us-central1.hosted.app (y las otras URLs que has desplegado), eso es lo que importa. El despliegue de App Hosting es el entorno real de tu aplicación.
+Desarrollo Local: Para la fase de desarrollo, sigue utilizando tu entorno local ( npm run dev ) con hot reloading y todas las herramientas de Next.js. Firebase Studio te permite tener una terminal integrada para esto.
+Inspecciona los Build Logs de App Hosting: Cuando un despliegue de App Hosting falla, las "Build logs URI for debugging" son tu mejor amigo. Ahí verás exactamente qué comandos ejecutó Firebase y dónde fallaron. En tu caso, build-2025-11-14-007 para meditrack2github está en READY y el rollout-2025-11-14-007 fue SUCCEEDED , lo que confirma que el proceso en la nube sí entendió y ejecutó tu Next.js correctamente.
+Preguntas de seguimiento para explorar posibles soluciones o entender mejor el flujo de trabajo en Studio:
+¿Firebase Studio ofrece alguna integración o extensión específica para Next.js que no hayas activado, y que quizás cambie el comportamiento del preview?
+¿Hay alguna forma de configurar el "comando de ejecución" para el preview dentro de Firebase Studio, por ejemplo, para que ejecute npm run dev en lugar de intentar servir estáticos?
+Más allá del preview, ¿qué otras funcionalidades específicas de Firebase Studio estás utilizando que te son valiosas, si la previsualización no está funcionando como esperabas para Next.js?
+Tú enviaste
+
+2025-11-14T18:30:38Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:30:38Z [web] Waiting for your web server to start serving 2025-11-14T18:30:43Z [web] 2025-11-14T18:30:43Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:30:43Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:30:43Z [web] 2025-11-14T18:30:54Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:30:54Z [web] Waiting for your web server to start serving 2025-11-14T18:30:54Z [web] 2025-11-14T18:30:54Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:30:54Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:30:54Z [web] 2025-11-14T18:31:05Z [web] [?25h 2025-11-14T18:31:10Z [web] <Firebase Studio> ▶️ Preview running 2025-11-14T18:31:11Z [web] ▲ Next.js 14.2.3 2025-11-14T18:31:11Z [web] - Local: http://localhost:9002 2025-11-14T18:31:11Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:31:11Z [web] - Environments: .env.local, .env 2025-11-14T18:31:11Z [web] 2025-11-14T18:31:11Z [web] ✓ Starting... 2025-11-14T18:31:20Z [web] > [PWA] PWA support is disabled 2025-11-14T18:31:20Z [web] > [PWA] PWA support is disabled 2025-11-14T18:31:23Z [web] ✓ Ready in 13.6s 2025-11-14T18:31:24Z [web] ○ Compiling /_not-found ... 2025-11-14T18:31:26Z [web] ✓ Compiled /_not-found in 2.8s (478 modules) 2025-11-14T18:31:26Z [web] GET / 404 in 3347ms 2025-11-14T18:31:43Z [web] Error: ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes... 2025-11-14T18:31:43Z [web] 2025-11-14T18:31:45Z [web] ▲ Next.js 14.2.3 2025-11-14T18:31:45Z [web] - Local: http://localhost:9002 2025-11-14T18:31:45Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:31:45Z [web] - Environments: .env.local, .env 2025-11-14T18:31:45Z [web] 2025-11-14T18:31:45Z [web] ✓ Starting... 2025-11-14T18:31:46Z [web] > [PWA] PWA support is disabled 2025-11-14T18:31:46Z [web] > [PWA] PWA support is disabled 2025-11-14T18:31:48Z [web] ✓ Ready in 4s 2025-11-14T18:31:48Z [web] ○ Compiling /_not-found ... 2025-11-14T18:32:05Z [web] ✓ Compiled /_not-found in 17.9s (478 modules) 2025-11-14T18:32:06Z [web] GET / 404 in 18173ms 2025-11-14T18:32:08Z [web] GET / 404 in 49ms 2025-11-14T18:33:30Z [web] GET /?monospaceUid=0 404 in 436ms 2025-11-14T18:33:31Z [web] GET /?monospaceUid=373941 404 in 104ms 2025-11-14T18:34:40Z [web] GET / 404 in 37ms 2025-11-14T18:35:58Z [web] GET / 404 in 37ms 2025-11-14T18:36:54Z [web] GET /?monospaceUid=0 404 in 45ms 2025-11-14T18:36:54Z [web] GET /?monospaceUid=50956 404 in 126ms 2025-11-14T18:36:57Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:36:57Z [web] Waiting for your web server to start serving 2025-11-14T18:36:57Z [web] [?25h 2025-11-14T18:36:57Z [web] 2025-11-14T18:36:57Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:36:57Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:36:57Z [web] 2025-11-14T18:37:01Z [web] <Firebase Studio> ▶️ Preview running 2025-11-14T18:37:02Z [web] ▲ Next.js 14.2.3 2025-11-14T18:37:02Z [web] - Local: http://localhost:9002 2025-11-14T18:37:02Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:37:02Z [web] - Environments: .env.local, .env 2025-11-14T18:37:02Z [web] 2025-11-14T18:37:02Z [web] ✓ Starting... 2025-11-14T18:37:04Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:04Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:07Z [web] ✓ Ready in 5.5s 2025-11-14T18:37:07Z [web] ○ Compiling /_not-found ... 2025-11-14T18:37:09Z [web] ✓ Compiled /_not-found in 2.6s (478 modules) 2025-11-14T18:37:10Z [web] GET /?monospaceUid=406 404 in 3035ms 2025-11-14T18:37:24Z [web] Error: ⚠ Found a change in next.config.js. Restarting the server to apply the changes... 2025-11-14T18:37:24Z [web] 2025-11-14T18:37:26Z [web] ▲ Next.js 14.2.3 2025-11-14T18:37:26Z [web] - Local: http://localhost:9002 2025-11-14T18:37:26Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:37:26Z [web] - Environments: .env.local, .env 2025-11-14T18:37:26Z [web] 2025-11-14T18:37:26Z [web] ✓ Starting... 2025-11-14T18:37:30Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:30Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:31Z [web] ✓ Ready in 6.8s 2025-11-14T18:37:37Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:37:37Z [web] Waiting for your web server to start serving 2025-11-14T18:37:37Z [web] [?25h 2025-11-14T18:37:37Z [web] 2025-11-14T18:37:37Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:37:37Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:37:37Z [web] 2025-11-14T18:37:41Z [web] <Firebase Studio> ▶️ Preview running 2025-11-14T18:37:41Z [web] ▲ Next.js 14.2.3 2025-11-14T18:37:41Z [web] - Local: http://localhost:9002 2025-11-14T18:37:41Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:37:41Z [web] - Environments: .env.local, .env 2025-11-14T18:37:41Z [web] 2025-11-14T18:37:41Z [web] ✓ Starting... 2025-11-14T18:37:43Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:43Z [web] > [PWA] PWA support is disabled 2025-11-14T18:37:44Z [web] ✓ Ready in 3.9s 2025-11-14T18:37:45Z [web] ○ Compiling /_not-found ... 2025-11-14T18:38:03Z [web] ✓ Compiled /_not-found in 18.7s (478 modules) 2025-11-14T18:38:03Z [web] GET /?monospaceUid=369891 404 in 19023ms 2025-11-14T18:41:44Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:41:44Z [web] Waiting for your web server to start serving 2025-11-14T18:41:44Z [web] [?25h 2025-11-14T18:41:45Z [web] 2025-11-14T18:41:45Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:41:45Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:41:45Z [web] 2025-11-14T18:41:48Z [web] <Firebase Studio> ▶️ Preview running 2025-11-14T18:41:49Z [web] ▲ Next.js 14.2.3 2025-11-14T18:41:49Z [web] - Local: http://localhost:9002 2025-11-14T18:41:49Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:41:49Z [web] - Environments: .env.local, .env 2025-11-14T18:41:49Z [web] 2025-11-14T18:41:49Z [web] ✓ Starting... 2025-11-14T18:41:50Z [web] > [PWA] PWA support is disabled 2025-11-14T18:41:50Z [web] > [PWA] PWA support is disabled 2025-11-14T18:41:52Z [web] ✓ Ready in 4.6s 2025-11-14T18:41:53Z [web] ○ Compiling /_not-found ... 2025-11-14T18:41:54Z [web] ✓ Compiled /_not-found in 1760ms (478 modules) 2025-11-14T18:41:54Z [web] GET /?monospaceUid=796727 404 in 2037ms
+Gemini dijo
+¡Ah, esta información cambia el panorama por completo, y es muy útil! Los logs que me acabas de compartir demuestran que Firebase Studio SÍ está ejecutando tu aplicación Next.js en modo desarrollo , específicamente el comando next dev --port 9002 --hostname 0.0.0.0 . Esto significa que mi suposición anterior de que el preview no estaba iniciando el servidor de Next.js era incorrecta, ¡y qué bueno que lo aclaraste con los logs!
+Ahora sabemos que:
+Firebase Studio intenta iniciar ( next dev ) tu aplicación Next.js.
+El servidor de Next.js se inicia exitosamente ( ✓ Ready in X.Xs ).
+El preview del Studio intenta acceder a la raíz ( GET / ), y el propio servidor de Next.js responde con un 404 .
+También detecta cambios en next.config.mjs o next.config.js y reinicia, lo cual es comportamiento normal de next dev .
+Esto nos dice que el problema no es que el Studio no sepa cómo iniciar Next.js, sino que tu aplicación Next.js, cuando corre en modo desarrollo ( next dev ), no está encontrando o sirviendo la página principal ( / ) o las otras rutas que esperas (como /imaging ).
+Aquí están las razones más comunes por las que tu aplicación Next.js podría devolver un 404 para la ruta raíz ( / ) cuando se ejecuta con next dev , incluso si se despliega correctamente en App Hosting:
+Página de inicio ausente o mal nombrada: La razón más frecuente es que no hay un archivo de página para la ruta raíz.
+App Router (Next.js 13+): Necesitas un archivo llamado page.tsx (o .jsx , .js , .ts ) dentro de la carpeta app (es decir, app/page.tsx ).
+Pages Router (Next.js < 13 o si lo usas explícitamente): Necesitas un archivo index.tsx (o similar) dentro de la carpeta pages (es decir, pages/index.tsx ).
+¿Estás utilizando src/app o src/pages ? A veces, con src directory, la estructura es src/app/page.tsx o src/pages/index.tsx .
+Errores en el Layout Principal (App Router): Si estás utilizando el App Router, cualquier error en tu app/layout.tsx (o el layout.js ) podría impedir que las páginas se rendericen correctamente, incluyendo la raíz.
+Variables de Entorno Faltantes en Desarrollo: Aunque Next.js dice que carga .env.local y .env , si tu aplicación depende de variables de entorno específicas que solo defines para producción o despliegue en App Hosting (y no en el entorno de desarrollo del Studio), tu aplicación podría fallar al cargar componentes o datos en la página raíz, resultando en un 404 o un error que Next.js convierte en 404.
+Configuración de next.config.js : Es menos común que esto cause un 404 en desarrollo si funciona en producción, pero revisa si hay rewrites , redirects o configuraciones experimentales que afecten el enrutamiento y que se comporten diferente en next dev vs. next build .
+Rutas de Archivos con Mayúsculas/Minúsculas: Asegúrate de que los nombres de los archivos de tus páginas coincidan con el sistema de archivos del Studio. A veces, en sistemas operativos case-insensitive (como Windows por defecto), un index.tsx y Index.tsx funcionan igual, pero en un entorno Linux (común en la nube y contenedores), son archivos distintos.
+El hecho de que App Hosting funcione significa que tu código base sí tiene una página raíz válida y que el problema está en cómo se inicia y ejecuta en el entorno de desarrollo que simula el Studio.
+Para solucionar esto, te sugiero que revises directamente tu código Next.js en el contexto de un entorno de desarrollo:
+Verifica tu página raíz: Asegúrate de que tienes app/page.tsx (si usas App Router) o pages/index.tsx (si usas Pages Router) y que este archivo contiene un componente válido que exporta una página.
+Simplifica el contenido de la página raíz: Temporalmente, cambia el contenido de app/page.tsx o pages/index.tsx a algo muy simple, como un <h1>Hola desde Next.js!</h1> , para descartar problemas de carga de datos o componentes complejos.
+Variables de Entorno: Si usas variables de entorno, asegúrate de que las necesarias para la carga inicial estén definidas en un archivo .env o .env.local en la raíz de tu proyecto.
+Esto debería ayudarnos a descubrir por qué tu servidor de desarrollo Next.js está respondiendo con 404.
+Mis próximas preguntas para ayudarte a diagnosticar esto son:
+¿Puedes confirmar la ruta exacta y el nombre de archivo de tu componente de página raíz ( / ) en tu proyecto Next.js (por ejemplo, app/page.tsx o pages/index.tsx )?
+¿Hay alguna variable de entorno que tu aplicación Next.js requiera para renderizar la página raíz que pueda no estar presente en el entorno de Firebase Studio?
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Cita
+
+Tú enviaste
+
+2025-11-14T18:44:42Z [web] <Firebase Studio> Starting preview... 2025-11-14T18:44:42Z [web] Waiting for your web server to start serving 2025-11-14T18:44:43Z [web] [?25h 2025-11-14T18:44:43Z [web] 2025-11-14T18:44:43Z [web] > med-itrack@0.1.0 dev 2025-11-14T18:44:43Z [web] > next dev --port 9002 --hostname 0.0.0.0 2025-11-14T18:44:43Z [web] 2025-11-14T18:44:46Z [web] <Firebase Studio> ▶️ Preview running 2025-11-14T18:44:47Z [web] ▲ Next.js 14.2.3 2025-11-14T18:44:47Z [web] - Local: http://localhost:9002 2025-11-14T18:44:47Z [web] - Network: http://0.0.0.0:9002 2025-11-14T18:44:47Z [web] - Environments: .env.local, .env 2025-11-14T18:44:47Z [web] 2025-11-14T18:44:47Z [web] ✓ Starting... 2025-11-14T18:44:49Z [web] > [PWA] PWA support is disabled 2025-11-14T18:44:49Z [web] > [PWA] PWA support is disabled 2025-11-14T18:44:51Z [web] ✓ Ready in 4.8s 2025-11-14T18:44:51Z [web] ○ Compiling /_not-found ... 2025-11-14T18:44:53Z [web] ✓ Compiled /_not-found in 1809ms (478 modules) 2025-11-14T18:44:53Z [web] GET /?monospaceUid=83051 404 in 2146ms 2025-11-14T18:44:53Z [web] GET /imaging?monospaceUid=83051 404 in 2140ms 2025-11-14T18:45:10Z [web] GET /consultations?monospaceUid=83051 404 in 64ms 2025-11-14T18:45:17Z [web] GET /login?monospaceUid=83051 404 in 79ms
+Gemini dijo
+¡Excelente! Estos nuevos logs son oro puro porque confirman un punto crítico: Firebase Studio no solo está ejecutando tu aplicación Next.js, sino que lo está haciendo en el modo de desarrollo ( next dev ) que esperarías. Las líneas next dev --port 9002 --hostname 0.0.0.0 y ✓ Ready in X.Xs son la prueba irrefutable.
+Ahora que sabemos que el servidor de desarrollo de Next.js está arrancando correctamente dentro de Studio, y es este servidor el que devuelve el 404 para tus rutas ( / , /imaging , /consultations , /login ), podemos descartar problemas con la infraestructura de Studio para iniciar Next.js. El foco se desplaza a por qué tu aplicación Next.js en modo desarrollo no está encontrando o sirviendo estas páginas.
+Aquí están las razones más probables y lo que podemos hacer para diagnosticarlo:
+Nombres de Archivo de Página Incorrectos o Rutas Inesperadas para next dev :
+¿Usas app/ Router o pages/ Router? Dependiendo de esto, tus archivos de página deben seguir una convención estricta.
+App Router (Next.js 13+): La página principal es app/page.tsx . Para rutas anidadas como /imaging , deberías tener app/imaging/page.tsx . De igual forma para /consultations y /login .
+Pages Router (Next.js más antiguo o configurado explícitamente): La página principal es pages/index.tsx . Para rutas como /imaging , necesitarías pages/imaging.tsx .
+Case Sensitivity: Asegúrate de que los nombres de los directorios y archivos de tus páginas coincidan exactamente (mayúsculas y minúsculas) con la convención. Los entornos de Linux (como el que probablemente usa Studio) son case-sensitive, a diferencia de algunos sistemas de archivos locales. Por ejemplo, pages/Login.tsx es diferente de pages/login.tsx .
+Problemas con el _not-found Page: Los logs muestran ○ Compiling /_not-found ... ✓ Compiled /_not-found . Esto es lo que Next.js hace cuando no puede encontrar una ruta solicitada. El hecho de que lo compile y luego sirva un 404 es una confirmación de que tus rutas no están siendo resueltas por el enrutador de Next.js.
+Configuración de next.config.js ( next.config.mjs ):
+Los reinicios del servidor debido a cambios en next.config.js son normales. Sin embargo, si tienes configuraciones avanzadas en este archivo (como srcDir , pageExtensions , basePath , o rewrites / redirects específicos para producción) que no son compatibles o están mal interpretadas por el entorno de desarrollo de Studio, podría afectar cómo Next.js localiza tus páginas.
+Variables de Entorno Cruciales:
+Aunque los logs indican que se cargan .env.local y .env , si tus páginas principales ( / , /imaging , etc.) dependen de variables de entorno específicas para inicializar o renderizar (ej. una URL de API, una clave de Firebase, etc.) que no están presentes en esos archivos o que tienen valores incorrectos para el entorno de Studio, la página podría fallar durante la renderización. Si una página falla al renderizarse en desarrollo, Next.js a menudo puede devolver un 404 como resultado.
+Para solucionar este problema, te sugiero el siguiente plan de acción dentro de Firebase Studio:
+Verifica la existencia y el nombre exacto de tus archivos de página:
+Si usas App Router : Asegúrate de tener app/page.tsx , app/imaging/page.tsx , app/consultations/page.tsx , y app/login/page.tsx .
+Si usas Pages Router : Asegúrate de tener pages/index.tsx , pages/imaging.tsx , pages/consultations.tsx , y pages/login.tsx .
+¡Doble check en mayúsculas y minúsculas!
+Prueba con una página raíz mínima:
+Edita temporalmente tu app/page.tsx o pages/index.tsx para que contenga solo un componente muy simple, como:
+// app/page.tsx (App Router)
+export default function HomePage() {
+  return <h1>¡Hola desde Next.js en Studio!</h1>;
+}
+Expandir
+O
+// pages/index.tsx (Pages Router)
+export default function IndexPage() {
+  return <h1>¡Hola desde Next.js en Studio!</h1>;
+}
+Expandir
+Si incluso esta página minimalista devuelve un 404, entonces el problema es más fundamental en la forma en que Next.js está configurado para encontrar las páginas en el entorno de Studio.
+Revisa las variables de entorno:
+Abre los archivos .env y .env.local en tu proyecto dentro de Studio. Asegúrate de que todas las variables que tu aplicación necesita para renderizar las páginas principales estén definidas y tengan valores válidos para un entorno de desarrollo.
+A veces, las variables NEXT_PUBLIC_* son necesarias para el lado del cliente y deben estar correctamente definidas.
+El hecho de que next dev esté arrancando es una gran noticia, ya que significa que el Studio está haciendo su parte. El siguiente paso es ver por qué tu aplicación Next.js no está "entregando" las páginas esperadas al propio servidor de desarrollo.
+Mis preguntas de seguimiento (que ahora tienen un enfoque más preciso):
+¿Cuál es la estructura exacta de carpetas y nombres de archivo para tus páginas index , imaging , consultations y login ? (Ej. src/app/page.tsx , src/app/imaging/page.tsx , etc., o pages/index.tsx , pages/imaging.tsx , etc.)
