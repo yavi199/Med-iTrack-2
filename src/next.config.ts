@@ -1,14 +1,5 @@
 
 import type {NextConfig} from 'next';
-import withPWAInit from '@ducanh2912/next-pwa';
-
-const withPWA = withPWAInit({
-  dest: 'public',
-  disable: true, // Siempre deshabilitado para liberar espacio
-  register: true,
-  sw: 'sw.js',
-});
-
 
 const nextConfig: NextConfig = {
   experimental: {
@@ -40,4 +31,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPWA(nextConfig);
+export default nextConfig;
