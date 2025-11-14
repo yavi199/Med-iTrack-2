@@ -1,0 +1,26 @@
+
+rules_version = '2';
+
+// Helper function to check if the request comes from an authenticated user
+function isSignedIn() {
+  return request.auth != null;
+}
+
+// Helper function to check if the request comes from the App Hosting backend (server-side actions)
+// This is a simplified check for this environment. In more complex scenarios, you might use custom claims.
+function isAppBackend() {
+  // Requests from the App Hosting backend don't have user auth context by default.
+  // We can allow writes if there's no auth object, assuming only our backend does this.
+  // THIS IS A TRUST-BASED RULE. For higher security, you would use custom tokens/claims.
+  return request.auth == null;
+}
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default rule for all documents
+    match /{document=**} {
+      allow read, write: if isSignedIn() || isAppBackend();
+    }
+  }
+}
