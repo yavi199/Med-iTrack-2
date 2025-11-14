@@ -9,8 +9,8 @@ const withPWA = withPWAInit({
   sw: 'sw.js',
 });
 
-
 const nextConfig: NextConfig = {
+  output: 'export', // <= THIS IS THE FIX
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true, // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
