@@ -1,0 +1,33 @@
+# Specifies the version of the App Hosting platform
+version: 1
+
+# Specifies the command to run to build your app
+build:
+  # The command to build your app
+  command: 'npm run build'
+
+# Specifies the command to run to start your app
+run:
+  # The command to start your app
+  command: 'npm run start'
+
+# Specifies the location of the generated static assets
+static:
+  # The directory containing the static assets
+  directory: out
+
+# The following are commented out by default, but can be uncommented to configure them
+# Environment variables
+# env:
+#   - variable: 'API_KEY'
+#     value: 'your-api-key'
+#     availability:
+#       - 'build'
+#       - 'run'
+#
+# # Automatic rollouts
+# rollout:
+#   # The percentage of traffic to roll out to the new version
+#   percentage: 100
+#   # The number of minutes to wait between rollout steps
+#   step_delay: 5
