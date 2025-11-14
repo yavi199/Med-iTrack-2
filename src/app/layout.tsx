@@ -1,8 +1,10 @@
+
 import type { Metadata, Viewport } from 'next';
 import '@/app/globals.css';
-import { AuthProvider } from '@/context/auth-context';
+import { AuthProvider, AuthLoader } from '@/context/auth-context';
 import { Toaster } from "@/components/ui/toaster";
 import { Plus_Jakarta_Sans, Space_Grotesk } from 'next/font/google';
+import AppHeader from '@/components/app/app-header';
 
 const APP_NAME = "Med-iTrack";
 const APP_DESCRIPTION = "Sistema de gestión y seguimiento para solicitudes de estudios de diagnóstico por imágenes.";
@@ -28,7 +30,6 @@ export const viewport: Viewport = {
   themeColor: "#FFFFFF",
 };
 
-
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -49,8 +50,13 @@ export default function RootLayout({
       <head />
       <body className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         <AuthProvider>
-            {children}
-            <Toaster />
+          <AuthLoader>
+            <div className="flex min-h-screen flex-col">
+              <AppHeader />
+              <main className="flex-1">{children}</main>
+            </div>
+          </AuthLoader>
+          <Toaster />
         </AuthProvider>
       </body>
     </html>
