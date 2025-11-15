@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -15,11 +14,11 @@ export default function HomePage() {
             <AppLogoIcon className="h-12 w-12 text-primary" />
           </div>
           <CardTitle className="font-headline text-3xl">¡Bienvenido a Med-iTrack!</CardTitle>
-          <CardDescription>La aplicación está lista. Puedes empezar a gestionar las solicitudes de estudios.</CardDescription>
+          <CardDescription>La aplicación está lista. Accede para empezar a gestionar las solicitudes.</CardDescription>
         </CardHeader>
         <CardContent>
           <Button asChild size="lg">
-            <Link href="/imaging">Ir al Dashboard de Imagenología</Link>
+            <Link href="/login">Acceder</Link>
           </Button>
         </CardContent>
       </Card>
